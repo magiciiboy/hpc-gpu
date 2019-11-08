@@ -1,0 +1,1 @@
+pgcc -acc -fast -ta=tesla:cc60 matrix-acc-tile.c -o mat
