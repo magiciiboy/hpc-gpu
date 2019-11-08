@@ -1,3 +1,6 @@
+module load pgi
+module load cuda
+
 cd ./1024
 sh ./run.sh
 cd ..
