@@ -1,59 +1,59 @@
-==12016== NVPROF is profiling process 12016, command: ./jacobi
-==12016== Profiling application: ./jacobi
-==12016== Profiling result:
+==14063== NVPROF is profiling process 14063, command: ./jacobi
+==14063== Profiling application: ./jacobi
+==14063== Profiling result:
 "Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
 ,%,ms,,us,us,ms,
-"GPU activities",53.739626,48.666198,1000,48.666000,41.183000,5.121000,"calcNext_47_gpu"
-"GPU activities",39.657563,35.913588,1000,35.913000,34.784000,0.037600,"swap_63_gpu"
-"GPU activities",4.103014,3.715658,1000,3.715000,3.520000,0.009376,"calcNext_55_gpu__red"
-"GPU activities",1.325412,1.200283,1000,1.200000,1.151000,0.002272,"[CUDA memcpy DtoH]"
-"GPU activities",1.174386,1.063515,1000,1.063000,1.023000,0.001472,"[CUDA memcpy HtoD]"
-"API calls",50.465808,238.035785,1,238035.785000,238035.785000,238.035785,"cuDevicePrimaryCtxRetain"
-"API calls",17.792626,83.923785,1,83923.785000,83923.785000,83.923785,"cuDevicePrimaryCtxRelease"
-"API calls",12.242296,57.744136,1000,57.744000,38.296000,5.122115,"cuMemcpyDtoHAsync"
-"API calls",8.917509,42.061868,3000,14.020000,1.351000,0.050799,"cuStreamSynchronize"
-"API calls",4.417413,20.835936,3000,6.945000,4.805000,0.044590,"cuLaunchKernel"
-"API calls",4.326306,20.406206,1,20406.206000,20406.206000,20.406206,"cuMemAllocManaged"
-"API calls",1.172042,5.528256,1000,5.528000,4.880000,0.024394,"cuMemcpyHtoDAsync"
-"API calls",0.291044,1.372787,2,686.393000,681.956000,0.690831,"cuDeviceTotalMem"
-"API calls",0.273766,1.291290,1,1291.290000,1291.290000,1.291290,"cuMemAllocHost"
-"API calls",0.045754,0.215810,1,215.810000,215.810000,0.215810,"cuModuleLoadDataEx"
-"API calls",0.044816,0.211385,3,70.461000,5.389000,0.196322,"cuMemAlloc"
-"API calls",0.003172,0.014963,1,14.963000,14.963000,0.014963,"cuStreamCreate"
-"API calls",0.001933,0.009116,2,4.558000,1.312000,0.007804,"cuDeviceGetPCIBusId"
-"API calls",0.001632,0.007697,3,2.565000,0.181000,0.006992,"cuModuleGetFunction"
-"API calls",0.001515,0.007145,3,2.381000,0.281000,0.005943,"cuCtxSetCurrent"
-"API calls",0.000914,0.004313,2,2.156000,0.424000,0.003889,"cuPointerGetAttributes"
-"API calls",0.000550,0.002593,3,0.864000,0.720000,0.000938,"cuDeviceGetCount"
-"API calls",0.000299,0.001410,2,0.705000,0.287000,0.001123,"cuDeviceGet"
-"API calls",0.000279,0.001314,4,0.328000,0.221000,0.000566,"cuDeviceGetAttribute"
-"API calls",0.000156,0.000738,1,0.738000,0.738000,0.000738,"cuDeviceComputeCapability"
-"API calls",0.000108,0.000510,1,0.510000,0.510000,0.000510,"cuCtxGetCurrent"
-"API calls",0.000065,0.000306,1,0.306000,0.306000,0.000306,"cuDriverGetVersion"
-"OpenACC (excl)",39.860447,58.656739,1000,58.656000,39.891000,5.124269,"acc_enqueue_download@laplace2d.c:47"
-"OpenACC (excl)",26.911045,39.601015,1000,39.601000,30.332000,0.051688,"acc_wait@laplace2d.c:63"
-"OpenACC (excl)",6.714132,9.880198,1000,9.880000,8.409000,0.622746,"acc_enqueue_launch@laplace2d.c:63 (swap_63_gpu)"
-"OpenACC (excl)",6.096956,8.971991,1000,8.971000,8.163000,0.050617,"acc_enqueue_launch@laplace2d.c:47 (calcNext_47_gpu)"
-"OpenACC (excl)",4.391574,6.462432,1000,6.462000,5.867000,0.023901,"acc_enqueue_launch@laplace2d.c:47 (calcNext_55_gpu__red)"
-"OpenACC (excl)",4.353069,6.405770,1000,6.405000,5.695000,0.025636,"acc_enqueue_upload@laplace2d.c:47"
-"OpenACC (excl)",3.480247,5.121366,2000,2.560000,2.107000,0.024332,"acc_wait@laplace2d.c:47"
-"OpenACC (excl)",2.449891,3.605143,1000,3.605000,3.313000,0.051592,"acc_compute_construct@laplace2d.c:47"
-"OpenACC (excl)",1.673268,2.462302,1000,2.462000,1.712000,0.599709,"acc_compute_construct@laplace2d.c:63"
-"OpenACC (excl)",1.207177,1.776424,1000,1.776000,1.022000,0.600854,"acc_enter_data@laplace2d.c:63"
-"OpenACC (excl)",1.050109,1.545290,1000,1.545000,1.388000,0.007477,"acc_exit_data@laplace2d.c:47"
-"OpenACC (excl)",0.937636,1.379781,1000,1.379000,1.150000,0.017340,"acc_exit_data@laplace2d.c:63"
-"OpenACC (excl)",0.705068,1.037544,1000,1.037000,0.889000,0.043950,"acc_enter_data@laplace2d.c:47"
-"OpenACC (excl)",0.169381,0.249253,1,249.253000,249.253000,0.249253,"acc_device_init"
+"GPU activities",53.582347,49.227089,1000,49.227000,42.015000,4.824165,"calcNext_47_gpu"
+"GPU activities",39.864734,36.624465,1000,36.624000,35.360000,0.038656,"swap_63_gpu"
+"GPU activities",4.049928,3.720743,1000,3.720000,3.584000,0.004736,"calcNext_55_gpu__red"
+"GPU activities",1.322150,1.214684,1000,1.214000,1.184000,0.002464,"[CUDA memcpy DtoH]"
+"GPU activities",1.180841,1.084860,1000,1.084000,1.055000,0.001536,"[CUDA memcpy HtoD]"
+"API calls",49.089940,225.622764,1,225622.764000,225622.764000,225.622764,"cuDevicePrimaryCtxRetain"
+"API calls",18.273967,83.989161,1,83989.161000,83989.161000,83.989161,"cuDevicePrimaryCtxRelease"
+"API calls",12.438509,57.168755,1000,57.168000,37.829000,4.821669,"cuMemcpyDtoHAsync"
+"API calls",9.270370,42.607641,3000,14.202000,1.400000,0.053545,"cuStreamSynchronize"
+"API calls",4.538875,20.861169,3000,6.953000,5.109000,0.046932,"cuLaunchKernel"
+"API calls",4.446971,20.438767,1,20438.767000,20438.767000,20.438767,"cuMemAllocManaged"
+"API calls",1.263037,5.805056,1000,5.805000,5.333000,0.019289,"cuMemcpyHtoDAsync"
+"API calls",0.301247,1.384566,2,692.283000,684.898000,0.699668,"cuDeviceTotalMem"
+"API calls",0.273792,1.258377,1,1258.377000,1258.377000,1.258377,"cuMemAllocHost"
+"API calls",0.046676,0.214530,1,214.530000,214.530000,0.214530,"cuModuleLoadDataEx"
+"API calls",0.045977,0.211315,3,70.438000,5.071000,0.196263,"cuMemAlloc"
+"API calls",0.003483,0.016009,1,16.009000,16.009000,0.016009,"cuStreamCreate"
+"API calls",0.001680,0.007721,2,3.860000,1.159000,0.006562,"cuDeviceGetPCIBusId"
+"API calls",0.001656,0.007613,3,2.537000,0.298000,0.006578,"cuCtxSetCurrent"
+"API calls",0.001537,0.007066,3,2.355000,0.183000,0.006237,"cuModuleGetFunction"
+"API calls",0.000943,0.004335,2,2.167000,0.498000,0.003837,"cuPointerGetAttributes"
+"API calls",0.000494,0.002272,3,0.757000,0.643000,0.000884,"cuDeviceGetCount"
+"API calls",0.000315,0.001449,4,0.362000,0.195000,0.000510,"cuDeviceGetAttribute"
+"API calls",0.000227,0.001042,2,0.521000,0.266000,0.000776,"cuDeviceGet"
+"API calls",0.000112,0.000514,1,0.514000,0.514000,0.000514,"cuDeviceComputeCapability"
+"API calls",0.000106,0.000487,1,0.487000,0.487000,0.000487,"cuCtxGetCurrent"
+"API calls",0.000085,0.000390,1,0.390000,0.390000,0.000390,"cuDriverGetVersion"
+"OpenACC (excl)",39.180394,58.143474,1000,58.143000,38.754000,4.823878,"acc_enqueue_download@laplace2d.c:47"
+"OpenACC (excl)",27.149369,40.289503,1000,40.289000,35.120000,0.054668,"acc_wait@laplace2d.c:63"
+"OpenACC (excl)",7.298159,10.830425,1000,10.830000,8.910000,0.647643,"acc_enqueue_launch@laplace2d.c:63 (swap_63_gpu)"
+"OpenACC (excl)",5.917383,8.781361,1000,8.781000,8.153000,0.052646,"acc_enqueue_launch@laplace2d.c:47 (calcNext_47_gpu)"
+"OpenACC (excl)",4.617528,6.852385,1000,6.852000,6.328000,0.022467,"acc_enqueue_launch@laplace2d.c:47 (calcNext_55_gpu__red)"
+"OpenACC (excl)",4.466769,6.628659,1000,6.628000,6.115000,0.023740,"acc_enqueue_upload@laplace2d.c:47"
+"OpenACC (excl)",3.560993,5.284492,2000,2.642000,2.215000,0.019789,"acc_wait@laplace2d.c:47"
+"OpenACC (excl)",2.479220,3.679148,1000,3.679000,3.453000,0.050439,"acc_compute_construct@laplace2d.c:47"
+"OpenACC (excl)",1.246332,1.849549,1000,1.849000,1.714000,0.005786,"acc_compute_construct@laplace2d.c:63"
+"OpenACC (excl)",1.219716,1.810051,1000,1.810000,1.091000,0.625290,"acc_enter_data@laplace2d.c:63"
+"OpenACC (excl)",1.029428,1.527665,1000,1.527000,1.386000,0.006434,"acc_exit_data@laplace2d.c:47"
+"OpenACC (excl)",0.898721,1.333697,1000,1.333000,1.199000,0.001806,"acc_exit_data@laplace2d.c:63"
+"OpenACC (excl)",0.767146,1.138440,1000,1.138000,0.991000,0.042259,"acc_enter_data@laplace2d.c:47"
+"OpenACC (excl)",0.168842,0.250561,1,250.561000,250.561000,0.250561,"acc_device_init"
 
-==12016== System profiling result:
+==14063== System profiling result:
 "","Device","Count","Avg","Min","Max"
-"SM Clock (MHz)","Tesla P100-PCIE-16GB (0)",7,1196.142857,405.000000,1328.000000
-"Memory Clock (MHz)","Tesla P100-PCIE-16GB (0)",7,715.000000,715.000000,715.000000
-"Temperature (C)","Tesla P100-PCIE-16GB (0)",13,33.692308,33.000000,34.000000
-"Power (mW)","Tesla P100-PCIE-16GB (0)",13,48449.615385,27752.000000,86423.000000
+"SM Clock (MHz)","Tesla P100-PCIE-16GB (0)",6,1328.000000,1328.000000,1328.000000
+"Memory Clock (MHz)","Tesla P100-PCIE-16GB (0)",6,715.000000,715.000000,715.000000
+"Temperature (C)","Tesla P100-PCIE-16GB (0)",12,34.416667,34.000000,35.000000
+"Power (mW)","Tesla P100-PCIE-16GB (0)",12,52044.833333,37465.000000,87149.000000
 
-==12016== Unified Memory profiling result:
+==14063== Unified Memory profiling result:
 "Device","Count","Avg Size","Min Size","Max Size","Total Size","Total Time",""
-"Tesla P100-PCIE-16GB (0)",878,19.535156KB,4.000000KB,424.000000KB,16.750000MB,0.000000,"Host To Device"
-"Tesla P100-PCIE-16GB (0)",,,,,14B,0.000000,"Gpu page fault groups"
+"Tesla P100-PCIE-16GB (0)",778,22.045898KB,4.000000KB,976.000000KB,16.750000MB,0.000000,"Host To Device"
+"Tesla P100-PCIE-16GB (0)",,,,,12B,0.000000,"Gpu page fault groups"
 Total CPU Page faults: 62

@@ -1,9 +1,9 @@
-==11948== NVPROF is profiling process 11948, command: ./jacobi
-==11948== Profiling application: ./jacobi
-==11948== Profiling result:
-==11948== Metric result:
+==13108== NVPROF is profiling process 13108, command: ./jacobi
+==13108== Profiling application: ./jacobi
+==13108== Profiling result:
+==13108== Metric result:
 "Device","Kernel","Invocations","Metric Name","Metric Description","Min","Max","Avg"
 "Tesla P100-PCIE-16GB (0)","swap_63_gpu",1000,"flop_count_dp","Floating Point Operations(Double Precision)",0,0,0
 "Tesla P100-PCIE-16GB (0)","calcNext_47_gpu",1000,"flop_count_dp","Floating Point Operations(Double Precision)",5222420,5222420,5222420
 "Tesla P100-PCIE-16GB (0)","calcNext_55_gpu__red",1000,"flop_count_dp","Floating Point Operations(Double Precision)",0,0,0
-==11948== Generated result file: /home/thuynh32/Assignment5/1. Jacobi/1B/1024/report_DP.nvprof
+==13108== Generated result file: /home/thuynh32/Assignment5/1. Jacobi/1B/1024/report_DP.nvprof
