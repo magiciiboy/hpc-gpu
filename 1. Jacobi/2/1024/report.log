@@ -1,0 +1,3 @@
+==31714== NVPROF is profiling process 31714, command: ./jacobi
+==31714== Error: Cannot create profiling file: /tmp/.nvprof/nvprof-tmp-31714-gpu045.pvt.bridges.psc.edu
+==31714== Profiling application: ./jacobi

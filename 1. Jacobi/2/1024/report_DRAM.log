@@ -1,0 +1,10 @@
+==19744== NVPROF is profiling process 19744, command: ./jacobi
+==19744== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+==19744== Profiling application: ./jacobi
+==19744== Profiling result:
+==19744== Metric result:
+"Device","Kernel","Invocations","Metric Name","Metric Description","Min","Max","Avg"
+"Tesla P100-PCIE-16GB (0)","swap_63_gpu",1000,"dram_read_transactions","Device Memory Read Transactions",268913,270913,270188
+"Tesla P100-PCIE-16GB (0)","calcNext_47_gpu",1000,"dram_read_transactions","Device Memory Read Transactions",273809,279910,277827
+"Tesla P100-PCIE-16GB (0)","calcNext_55_gpu__red",1000,"dram_read_transactions","Device Memory Read Transactions",7,308,266
+==19744== Generated result file: /home/thuynh32/Assignment5/1. Jacobi/2/1024/report_DRAM.nvprof
