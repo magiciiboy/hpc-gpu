@@ -31,8 +31,8 @@
 
 int main(int argc, char** argv)
 {
-    const int n = 1024;
-    const int m = 1024;
+    const int n = 2048;
+    const int m = 2048;
     const int iter_max = 1000;
     
     const double tol = 1.0e-6;
@@ -50,11 +50,8 @@ int main(int argc, char** argv)
   
     while ( error > tol && iter < iter_max )
     {
-        #pragma acc kernels
-        {
-            error = calcNext(A, Anew, m, n);
-            swap(A, Anew, m, n);
-        }
+        error = calcNext(A, Anew, m, n);
+        swap(A, Anew, m, n);
 
         if(iter % 100 == 0) printf("%5d, %0.6f\n", iter, error);
         
