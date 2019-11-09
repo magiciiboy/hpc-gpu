@@ -50,8 +50,11 @@ int main(int argc, char** argv)
   
     while ( error > tol && iter < iter_max )
     {
-        error = calcNext(A, Anew, m, n);
-        swap(A, Anew, m, n);
+        #pragma acc kernels
+        {
+            error = calcNext(A, Anew, m, n);
+            swap(A, Anew, m, n);
+        }
 
         if(iter % 100 == 0) printf("%5d, %0.6f\n", iter, error);
         
