@@ -1,9 +1,9 @@
 pgcc -acc -fast -ta=tesla:cc60,managed -Minfo=accel jacobi.c laplace2d.c -o jacobi
 
 # Run Jacopi 3 times for getting results and time information
-for i in $(seq 1 3); do
-    ./jacobi >> report_Jacopi.log
-done
+./jacobi >> report_Jacopi.log
+./jacobi >> report_Jacopi.log
+./jacobi >> report_Jacopi.log
 
 # DRAM
 rm report_Jacopi.log
