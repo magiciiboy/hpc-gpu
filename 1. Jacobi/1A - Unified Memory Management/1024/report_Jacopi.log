@@ -1,4 +1,5 @@
-Jacobi relaxation Calculation: 2048 x 2048 mesh
+Jacobi relaxation Calculation: 1024 x 1024 mesh
+Jacobi relaxation Calculation: 1024 x 1024 mesh
     0, 0.250000
   100, 0.002397
   200, 0.001204
@@ -9,8 +10,8 @@ Jacobi relaxation Calculation: 2048 x 2048 mesh
   700, 0.000345
   800, 0.000302
   900, 0.000269
- total: 94.764291 s
-Jacobi relaxation Calculation: 2048 x 2048 mesh
+ total: 0.540640 s
+Jacobi relaxation Calculation: 1024 x 1024 mesh
     0, 0.250000
   100, 0.002397
   200, 0.001204
@@ -21,8 +22,8 @@ Jacobi relaxation Calculation: 2048 x 2048 mesh
   700, 0.000345
   800, 0.000302
   900, 0.000269
- total: 67.071157 s
-Jacobi relaxation Calculation: 2048 x 2048 mesh
+ total: 0.539682 s
+Jacobi relaxation Calculation: 1024 x 1024 mesh
     0, 0.250000
   100, 0.002397
   200, 0.001204
@@ -33,4 +34,4 @@ Jacobi relaxation Calculation: 2048 x 2048 mesh
   700, 0.000345
   800, 0.000302
   900, 0.000269
- total: 1.249472 s
+ total: 0.538820 s
