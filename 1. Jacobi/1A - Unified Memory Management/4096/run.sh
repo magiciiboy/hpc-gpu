@@ -1,5 +1,10 @@
 pgcc -acc -fast -ta=tesla:cc60,managed -Minfo=accel jacobi.c laplace2d.c -o jacobi
 
+# Run Jacopi 3 times for getting results and time information
+for i in $(seq 1 3); do
+    ./jacobi >> report_Jacopi.log
+done
+
 # DRAM
 rm report_Jacopi.log
 nvprof --csv --cpu-profiling on \
@@ -11,7 +16,7 @@ nvprof --csv --cpu-profiling on \
     --print-summary \
     --print-summary-per-gpu \
     -o report_DRAM.nvprof \
-    --log-file report_DRAM.log ./jacobi >> report_Jacopi.log
+    --log-file report_DRAM.log ./jacobi
 
 
 # DP
@@ -24,7 +29,7 @@ nvprof --csv --cpu-profiling on \
     --print-summary \
     --print-summary-per-gpu \
     -o report_DP.nvprof \
-    --log-file report_DP.log ./jacobi >> report_Jacopi.log
+    --log-file report_DP.log ./jacobi
 
 # Timing vs Power
 # nvprof --csv --system-profiling on --log-file report_Time_Power.log ./jacobi
@@ -32,4 +37,4 @@ nvprof --csv --cpu-profiling on \
 # Human-readable report
 nvprof --csv --system-profiling on \
     --devices 0 \
-    --log-file report.log ./jacobi >> report_Jacopi.log
+    --log-file report.log ./jacobi
