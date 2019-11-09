@@ -1,0 +1,10 @@
+==14158== NVPROF is profiling process 14158, command: ./jacobi
+==14158== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+==14158== Profiling application: ./jacobi
+==14158== Profiling result:
+==14158== Metric result:
+"Device","Kernel","Invocations","Metric Name","Metric Description","Min","Max","Avg"
+"Tesla P100-PCIE-16GB (0)","swap_63_gpu",1000,"dram_read_transactions","Device Memory Read Transactions",4841547,4897250,4876688
+"Tesla P100-PCIE-16GB (0)","calcNext_47_gpu",1000,"dram_read_transactions","Device Memory Read Transactions",5772319,6424379,6223699
+"Tesla P100-PCIE-16GB (0)","calcNext_55_gpu__red",1000,"dram_read_transactions","Device Memory Read Transactions",524,1084,1034
+==14158== Generated result file: /home/thuynh32/Assignment5/1. Jacobi/1B/4096/report_DRAM.nvprof
