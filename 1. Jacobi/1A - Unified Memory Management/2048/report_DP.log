@@ -1,10 +1,10 @@
-==28327== NVPROF is profiling process 28327, command: ./jacobi
-==28327== Profiling application: ./jacobi
-==28327== Profiling result:
-==28327== Metric result:
+==28840== NVPROF is profiling process 28840, command: ./jacobi
+==28840== Profiling application: ./jacobi
+==28840== Profiling result:
+==28840== Metric result:
 "Device","Kernel","Invocations","Metric Name","Metric Description","Min","Max","Avg"
-"Tesla P100-PCIE-16GB (0)","calcNext_51_gpu",1000,"flop_count_dp","Floating Point Operations(Double Precision)",5222420,5222420,5222420
+"Tesla P100-PCIE-16GB (0)","calcNext_51_gpu",1000,"flop_count_dp","Floating Point Operations(Double Precision)",20930580,20930580,20930580
 "Tesla P100-PCIE-16GB (0)","calcNext_56_gpu__red",1000,"flop_count_dp","Floating Point Operations(Double Precision)",0,0,0
 "Tesla P100-PCIE-16GB (0)","swap_67_gpu",1000,"flop_count_dp","Floating Point Operations(Double Precision)",0,0,0
 "Tesla P100-PCIE-16GB (0)","initialize_39_gpu",1,"flop_count_dp","Floating Point Operations(Double Precision)",0,0,0
-==28327== Generated result file: /home/thuynh32/Assignment5/1. Jacobi/1A - Unified Memory Management/1024/report_DP.nvprof
+==28840== Generated result file: /home/thuynh32/Assignment5/1. Jacobi/1A - Unified Memory Management/2048/report_DP.nvprof
