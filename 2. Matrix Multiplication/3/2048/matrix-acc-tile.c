@@ -17,13 +17,18 @@ void matmul(){
 
   // Compute matrix multiplication.
   int i, j, k;
-  #pragma acc kernels
+  #pragma acc data copyin(a[0:SIZE*SIZE],b[0:SIZE*SIZE]), copy(c[0:SIZE*SIZE])
   {
+    #pragma acc kernels loop
     for (i = 0; i < SIZE; ++i) {
+      #pragma acc loop gang(100), vector(32)
       for (j = 0; j < SIZE; ++j) {
+        double tmp = 0.0;
+        #pragma acc loop reduction(+:tmp)
         for (k = 0; k < SIZE; ++k) {
-          c[i][j] = a[i][k] * b[k][j] + c[i][j];
+          tmp += a[i][k] * b[k][j];
         }
+        c[i][j] = tmp;
       }
     }
   }
