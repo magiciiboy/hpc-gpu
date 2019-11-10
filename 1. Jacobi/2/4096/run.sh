@@ -1,4 +1,4 @@
-pgcc -acc -fast -ta=tesla:cc60,managed -Minfo=accel jacobi.c laplace2d.c -o jacobi
+pgcc -acc -fast -ta=tesla:cc60 -Minfo=accel jacobi.c laplace2d.c -o jacobi
 
 # Run Jacopi 3 times for getting results and time information
 ./jacobi >> report_Jacopi.log
