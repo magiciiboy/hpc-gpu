@@ -1,6 +1,6 @@
 module load cuda
 module load pgi
-pgcc -acc -fast -ta=tesla:cc60,managed -Minfo=accel matrix-acc-tile.c -o matmul
+pgcc -acc -fast -ta=tesla:cc60 -Minfo=accel matrix-acc-tile.c -o matmul
 
 # DRAM
 rm report_Matmul.log
