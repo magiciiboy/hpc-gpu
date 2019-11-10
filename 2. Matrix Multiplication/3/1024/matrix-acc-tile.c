@@ -17,6 +17,7 @@ void matmul(){
 
   // Compute matrix multiplication.
   int i, j, k;
+  // Can use pcopyin, pcopy to reuse data presented on accelerator
   #pragma acc data copyin(a[0:SIZE*SIZE],b[0:SIZE*SIZE]), copy(c[0:SIZE*SIZE])
   {
     #pragma acc kernels loop
