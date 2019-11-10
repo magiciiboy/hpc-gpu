@@ -1,0 +1,53 @@
+==27804== NVPROF is profiling process 27804, command: ./matmul
+==27804== Profiling application: ./matmul
+==27804== Profiling result:
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"GPU activities",83.990721,14.733906,1,14.733906,14.733906,14.733906,"matmul_22_gpu"
+"GPU activities",12.293672,2.156593,3,0.718864,0.717083,0.721883,"[CUDA memcpy HtoD]"
+"GPU activities",3.715607,0.651803,1,0.651803,0.651803,0.651803,"[CUDA memcpy DtoH]"
+"API calls",61.769763,221.608036,1,221.608036,221.608036,221.608036,"cuDevicePrimaryCtxRetain"
+"API calls",21.199911,76.057773,1,76.057773,76.057773,76.057773,"cuDevicePrimaryCtxRelease"
+"API calls",8.733960,31.334357,1,31.334357,31.334357,31.334357,"cuMemHostAlloc"
+"API calls",4.487081,16.098057,3,5.366019,0.649508,14.732228,"cuStreamSynchronize"
+"API calls",2.861694,10.266744,1,10.266744,10.266744,10.266744,"cuMemFreeHost"
+"API calls",0.523348,1.877589,4,0.469397,0.185922,0.758453,"cuMemAlloc"
+"API calls",0.341435,1.224947,1,1.224947,1.224947,1.224947,"cuMemAllocHost"
+"API calls",0.030392,0.109037,1,0.109037,0.109037,0.109037,"cuModuleLoadDataEx"
+"API calls",0.015629,0.056070,3,0.018690,0.010564,0.033029,"cuMemcpyHtoDAsync"
+"API calls",0.013404,0.048088,1,0.048088,0.048088,0.048088,"cuLaunchKernel"
+"API calls",0.004075,0.014619,1,0.014619,0.014619,0.014619,"cuStreamCreate"
+"API calls",0.003572,0.012815,1,0.012815,0.012815,0.012815,"cuMemcpyDtoHAsync"
+"API calls",0.003216,0.011539,2,0.005769,0.002888,0.008651,"cuEventRecord"
+"API calls",0.002409,0.008641,2,0.004320,0.001363,0.007278,"cuDeviceGetPCIBusId"
+"API calls",0.002041,0.007321,3,0.002440,0.001037,0.003632,"cuPointerGetAttributes"
+"API calls",0.002029,0.007279,3,0.002426,0.001005,0.004929,"cuEventCreate"
+"API calls",0.001834,0.006579,3,0.002193,0.000302,0.005451,"cuCtxSetCurrent"
+"API calls",0.001624,0.005826,1,0.005826,0.005826,0.005826,"cuEventSynchronize"
+"API calls",0.000748,0.002685,1,0.002685,0.002685,0.002685,"cuModuleGetFunction"
+"API calls",0.000712,0.002555,3,0.000851,0.000606,0.001211,"cuDeviceGetCount"
+"API calls",0.000430,0.001542,2,0.000771,0.000330,0.001212,"cuDeviceGet"
+"API calls",0.000365,0.001308,4,0.000327,0.000202,0.000548,"cuDeviceGetAttribute"
+"API calls",0.000127,0.000455,1,0.000455,0.000455,0.000455,"cuCtxGetCurrent"
+"API calls",0.000120,0.000430,1,0.000430,0.000430,0.000430,"cuDeviceComputeCapability"
+"API calls",0.000083,0.000299,1,0.000299,0.000299,0.000299,"cuDriverGetVersion"
+"OpenACC (excl)",67.342703,36.471666,1,36.471666,36.471666,36.471666,"acc_enter_data@matrix-acc-tile.c:20"
+"OpenACC (excl)",27.204870,14.733696,1,14.733696,14.733696,14.733696,"acc_wait@matrix-acc-tile.c:22"
+"OpenACC (excl)",3.422729,1.853692,1,1.853692,1.853692,1.853692,"acc_wait@matrix-acc-tile.c:31"
+"OpenACC (excl)",1.328443,0.719462,1,0.719462,0.719462,0.719462,"acc_wait@matrix-acc-tile.c:20"
+"OpenACC (excl)",0.272577,0.147623,1,0.147623,0.147623,0.147623,"acc_device_init@matrix-acc-tile.c:20"
+"OpenACC (excl)",0.139233,0.075406,3,0.025135,0.012884,0.047228,"acc_enqueue_upload@matrix-acc-tile.c:20"
+"OpenACC (excl)",0.103216,0.055900,1,0.055900,0.055900,0.055900,"acc_exit_data@matrix-acc-tile.c:20"
+"OpenACC (excl)",0.102151,0.055323,1,0.055323,0.055323,0.055323,"acc_enqueue_launch@matrix-acc-tile.c:22 (matmul_22_gpu)"
+"OpenACC (excl)",0.049732,0.026934,1,0.026934,0.026934,0.026934,"acc_enqueue_download@matrix-acc-tile.c:31"
+"OpenACC (excl)",0.034347,0.018602,1,0.018602,0.018602,0.018602,"acc_compute_construct@matrix-acc-tile.c:22"
+"OpenACC (excl)",0.000000,0.000000,3,0.000000,0.000000,0.000000,"acc_alloc@matrix-acc-tile.c:20"
+"OpenACC (excl)",0.000000,0.000000,3,0.000000,0.000000,0.000000,"acc_create@matrix-acc-tile.c:20"
+"OpenACC (excl)",0.000000,0.000000,3,0.000000,0.000000,0.000000,"acc_delete@matrix-acc-tile.c:31"
+
+==27804== System profiling result:
+"","Device","Count","Avg","Min","Max"
+"SM Clock (MHz)","Tesla P100-PCIE-16GB (0)",7,1328.000000,1328.000000,1328.000000
+"Memory Clock (MHz)","Tesla P100-PCIE-16GB (0)",7,715.000000,715.000000,715.000000
+"Temperature (C)","Tesla P100-PCIE-16GB (0)",13,28.000000,28.000000,28.000000
+"Power (mW)","Tesla P100-PCIE-16GB (0)",13,45422.692308,36017.000000,77479.000000
