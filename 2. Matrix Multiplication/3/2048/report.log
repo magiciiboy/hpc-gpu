@@ -1,0 +1,54 @@
+==14376== NVPROF is profiling process 14376, command: ./matmul
+==14376== Profiling application: ./matmul
+==14376== Profiling result:
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,ms,,ms,ms,ms,
+"GPU activities",84.169171,61.645351,1,61.645351,61.645351,61.645351,"matmul_25_gpu"
+"GPU activities",12.348773,9.044219,6,1.507369,1.490805,1.555572,"[CUDA memcpy HtoD]"
+"GPU activities",3.482057,2.550252,3,0.850084,0.002304,1.274614,"[CUDA memcpy DtoH]"
+"API calls",52.177473,231.081274,1,231.081274,231.081274,231.081274,"cuDevicePrimaryCtxRetain"
+"API calls",20.767669,91.974929,1,91.974929,91.974929,91.974929,"cuDevicePrimaryCtxRelease"
+"API calls",14.544425,64.413703,3,21.471234,1.275582,61.647019,"cuStreamSynchronize"
+"API calls",7.500626,33.218440,1,33.218440,33.218440,33.218440,"cuMemHostAlloc"
+"API calls",3.222082,14.269813,1,14.269813,14.269813,14.269813,"cuMemFreeHost"
+"API calls",1.118418,4.953199,4,1.238299,0.201367,2.996721,"cuMemAlloc"
+"API calls",0.297942,1.319511,8,0.164938,0.001846,1.283745,"cuEventSynchronize"
+"API calls",0.284271,1.258968,1,1.258968,1.258968,1.258968,"cuMemAllocHost"
+"API calls",0.025331,0.112186,1,0.112186,0.112186,0.112186,"cuModuleLoadDataEx"
+"API calls",0.021524,0.095325,6,0.015887,0.007757,0.043575,"cuMemcpyHtoDAsync"
+"API calls",0.012318,0.054554,1,0.054554,0.054554,0.054554,"cuLaunchKernel"
+"API calls",0.007547,0.033422,10,0.003342,0.001747,0.008821,"cuEventRecord"
+"API calls",0.006329,0.028029,3,0.009343,0.005387,0.015176,"cuMemcpyDtoHAsync"
+"API calls",0.003461,0.015330,1,0.015330,0.015330,0.015330,"cuStreamCreate"
+"API calls",0.002239,0.009914,4,0.002478,0.000460,0.005864,"cuEventCreate"
+"API calls",0.001929,0.008544,3,0.002848,0.002163,0.004054,"cuPointerGetAttributes"
+"API calls",0.001866,0.008263,2,0.004131,0.001398,0.006865,"cuDeviceGetPCIBusId"
+"API calls",0.001648,0.007300,3,0.002433,0.000319,0.006151,"cuCtxSetCurrent"
+"API calls",0.001372,0.006075,1,0.006075,0.006075,0.006075,"cuModuleGetFunction"
+"API calls",0.000557,0.002467,3,0.000822,0.000706,0.000936,"cuDeviceGetCount"
+"API calls",0.000355,0.001570,2,0.000785,0.000276,0.001294,"cuDeviceGet"
+"API calls",0.000319,0.001414,4,0.000353,0.000194,0.000585,"cuDeviceGetAttribute"
+"API calls",0.000112,0.000498,1,0.000498,0.000498,0.000498,"cuCtxGetCurrent"
+"API calls",0.000107,0.000475,1,0.000475,0.000475,0.000475,"cuDeviceComputeCapability"
+"API calls",0.000079,0.000350,1,0.000350,0.000350,0.000350,"cuDriverGetVersion"
+"OpenACC (excl)",50.492620,61.648985,1,61.648985,61.648985,61.648985,"acc_wait@matrix-acc-tile.c:25"
+"OpenACC (excl)",41.508610,50.679955,1,50.679955,50.679955,50.679955,"acc_enter_data@matrix-acc-tile.c:20"
+"OpenACC (excl)",3.233622,3.948092,1,3.948092,3.948092,3.948092,"acc_exit_data@matrix-acc-tile.c:20"
+"OpenACC (excl)",3.212276,3.922030,1,3.922030,3.922030,3.922030,"acc_wait@matrix-acc-tile.c:35"
+"OpenACC (excl)",1.224318,1.494831,1,1.494831,1.494831,1.494831,"acc_wait@matrix-acc-tile.c:20"
+"OpenACC (excl)",0.122148,0.149137,1,0.149137,0.149137,0.149137,"acc_device_init@matrix-acc-tile.c:20"
+"OpenACC (excl)",0.102337,0.124949,6,0.020824,0.010086,0.059510,"acc_enqueue_upload@matrix-acc-tile.c:20"
+"OpenACC (excl)",0.049434,0.060356,1,0.060356,0.060356,0.060356,"acc_enqueue_launch@matrix-acc-tile.c:25 (matmul_25_gpu)"
+"OpenACC (excl)",0.042803,0.052260,3,0.017420,0.009327,0.031323,"acc_enqueue_download@matrix-acc-tile.c:35"
+"OpenACC (excl)",0.011833,0.014447,1,0.014447,0.014447,0.014447,"acc_compute_construct@matrix-acc-tile.c:22"
+"OpenACC (excl)",0.000000,0.000000,3,0.000000,0.000000,0.000000,"acc_alloc@matrix-acc-tile.c:20"
+"OpenACC (excl)",0.000000,0.000000,3,0.000000,0.000000,0.000000,"acc_create@matrix-acc-tile.c:20"
+"OpenACC (excl)",0.000000,0.000000,3,0.000000,0.000000,0.000000,"acc_delete@matrix-acc-tile.c:35"
+
+==14376== System profiling result:
+"","Device","Count","Avg","Min","Max"
+"SM Clock (MHz)","Tesla P100-PCIE-16GB (0)",33,1328.000000,1328.000000,1328.000000
+"Memory Clock (MHz)","Tesla P100-PCIE-16GB (0)",33,715.000000,715.000000,715.000000
+"Temperature (C)","Tesla P100-PCIE-16GB (0)",66,33.015152,33.000000,34.000000
+"Power (mW)","Tesla P100-PCIE-16GB (0)",66,47261.000000,37194.000000,96284.000000
+==14376== Warning: Some profiling data are not recorded. Make sure cudaProfilerStop() or cuProfilerStop() is called before application exit to flush profile data.

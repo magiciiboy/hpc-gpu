@@ -1,0 +1,8 @@
+==8298== NVPROF is profiling process 8298, command: ./bmt
+==8298== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+==8298== Profiling application: ./bmt
+==8298== Profiling result:
+==8298== Metric result:
+"Device","Kernel","Invocations","Metric Name","Metric Description","Min","Max","Avg"
+"Tesla P100-PCIE-16GB (0)","main_184_gpu",1,"dram_read_transactions","Device Memory Read Transactions",14724407673,14724407673,14724407673
+==8298== Generated result file: /home/thuynh32/Assignment5/3. Himeno Benchmark/1A/L/report_DRAM.nvprof

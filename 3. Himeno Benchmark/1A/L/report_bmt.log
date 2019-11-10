@@ -1,0 +1,7 @@
+mimax = 470 mjmax = 200 mkmax = 200
+imax = 469 jmax = 199 kmax =199
+cpu : 131.129929 sec.
+Loop executed for 200 times
+Gosa : 7.399127e-316 
+MFLOPS measured : 939.845399
+Score based on MMX Pentium 200MHz : 29.124431
