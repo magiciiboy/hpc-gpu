@@ -1,0 +1,9 @@
+==1404== NVPROF is profiling process 1404, command: ./jacobi
+==1404== Profiling application: ./jacobi
+==1404== Profiling result:
+==1404== Metric result:
+"Device","Kernel","Invocations","Metric Name","Metric Description","Min","Max","Avg"
+"Tesla P100-PCIE-16GB (0)","swap_63_gpu",1000,"flop_count_dp","Floating Point Operations(Double Precision)",0,0,0
+"Tesla P100-PCIE-16GB (0)","calcNext_47_gpu",1000,"flop_count_dp","Floating Point Operations(Double Precision)",20930580,20930580,20930580
+"Tesla P100-PCIE-16GB (0)","calcNext_47_gpu__red",1000,"flop_count_dp","Floating Point Operations(Double Precision)",0,0,0
+==1404== Generated result file: /home/thuynh32/Assignment5/1. Jacobi/2/2048/report_DP.nvprof
