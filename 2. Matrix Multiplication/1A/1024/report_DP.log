@@ -1,0 +1,7 @@
+==23119== NVPROF is profiling process 23119, command: ./matmul
+==23119== Profiling application: ./matmul
+==23119== Profiling result:
+==23119== Metric result:
+"Device","Kernel","Invocations","Metric Name","Metric Description","Min","Max","Avg"
+"Tesla P100-PCIE-16GB (0)","matmul_24_gpu",1,"flop_count_dp","Floating Point Operations(Double Precision)",2147483648,2147483648,2147483648
+==23119== Generated result file: /home/thuynh32/Assignment5/2. Matrix Multiplication/1A/1024/report_DP.nvprof
