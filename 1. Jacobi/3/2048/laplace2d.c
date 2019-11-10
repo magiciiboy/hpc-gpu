@@ -44,9 +44,12 @@ void initialize(double *restrict A, double *restrict Anew, int m, int n)
 double calcNext(double *restrict A, double *restrict Anew, int m, int n)
 {
     double error = 0.0; 
-    #pragma acc parallel loop reduction(max:error)
+    #pragma acc data pcopyin(A[0:n*m]) pcopy(Anew[0:n*m])
+    #pragma omp parallel for shared(m, n, Anew, A)
+    #pragma acc kernels loop gang(32), vector(16)
     for( int j = 1; j < n-1; j++)
     {
+        #pragma acc loop reduction(max:error) gang(16), vector(32)
         for( int i = 1; i < m-1; i++ )
         {
             Anew[OFFSET(j, i, m)] = 0.25 * ( A[OFFSET(j, i+1, m)] + A[OFFSET(j, i-1, m)]
@@ -60,9 +63,12 @@ double calcNext(double *restrict A, double *restrict Anew, int m, int n)
         
 void swap(double *restrict A, double *restrict Anew, int m, int n)
 {
-    #pragma acc parallel loop
+    #pragma acc data copyin(Anew[0:n*m]) copyout(A[0:n*m])
+    #pragma omp parallel for shared(m, n, Anew, A)
+    #pragma acc kernels loop
     for( int j = 1; j < n-1; j++)
     {
+        #pragma acc loop gang(16), vector(32)
         for( int i = 1; i < m-1; i++ )
         {
             A[OFFSET(j, i, m)] = Anew[OFFSET(j, i, m)];    
