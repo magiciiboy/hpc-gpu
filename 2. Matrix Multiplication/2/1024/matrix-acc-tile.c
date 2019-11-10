@@ -17,7 +17,8 @@ void matmul(){
 
   // Compute matrix multiplication.
   int i, j, k;
-  #pragma acc kernels
+  #pragma acc data copyin(a[0:SIZE*SIZE],b[0:SIZE*SIZE]), copy(c[0:SIZE*SIZE])
+  #pragma acc parallel loop
   {
     for (i = 0; i < SIZE; ++i) {
       for (j = 0; j < SIZE; ++j) {
