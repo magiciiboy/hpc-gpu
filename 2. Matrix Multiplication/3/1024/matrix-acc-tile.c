@@ -22,7 +22,7 @@ void matmul(){
   {
     #pragma acc kernels loop
     for (i = 0; i < SIZE; ++i) {
-      #pragma acc loop gang(100), vector(32)
+      #pragma acc loop gang(64), vector(32)
       for (j = 0; j < SIZE; ++j) {
         double tmp = 0.0;
         #pragma acc loop reduction(+:tmp)
