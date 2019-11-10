@@ -1,0 +1,53 @@
+==7197== NVPROF is profiling process 7197, command: ./bmt
+==7197== Profiling application: ./bmt
+==7197== Profiling result:
+"Type","Time(%)","Time","Calls","Avg","Min","Max","Name"
+,%,s,,s,s,s,
+"GPU activities",99.732356,2.270031,1,2.270031,2.270031,2.270031,"main_184_gpu"
+"GPU activities",0.238509,0.005429,8,0.000679,0.000063,0.001482,"[CUDA memcpy HtoD]"
+"GPU activities",0.029134,0.000663,2,0.000332,0.000331,0.000332,"[CUDA memcpy DtoH]"
+"API calls",86.397648,2.271091,3,0.757030,0.000400,2.270042,"cuStreamSynchronize"
+"API calls",8.322352,0.218765,1,0.218765,0.218765,0.218765,"cuDevicePrimaryCtxRetain"
+"API calls",3.545337,0.093194,1,0.093194,0.093194,0.093194,"cuDevicePrimaryCtxRelease"
+"API calls",1.089553,0.028641,1,0.028641,0.028641,0.028641,"cuMemHostAlloc"
+"API calls",0.371216,0.009758,1,0.009758,0.009758,0.009758,"cuMemFreeHost"
+"API calls",0.211718,0.005565,8,0.000696,0.000191,0.001519,"cuMemAlloc"
+"API calls",0.044825,0.001178,1,0.001178,0.001178,0.001178,"cuMemAllocHost"
+"API calls",0.005772,0.000152,1,0.000152,0.000152,0.000152,"cuModuleLoadDataEx"
+"API calls",0.004255,0.000112,8,0.000014,0.000009,0.000032,"cuMemcpyHtoDAsync"
+"API calls",0.001775,0.000047,1,0.000047,0.000047,0.000047,"cuLaunchKernel"
+"API calls",0.001594,0.000042,2,0.000021,0.000007,0.000035,"cuMemcpyDtoHAsync"
+"API calls",0.000924,0.000024,6,0.000004,0.000002,0.000008,"cuEventRecord"
+"API calls",0.000868,0.000023,5,0.000005,0.000002,0.000011,"cuEventSynchronize"
+"API calls",0.000500,0.000013,1,0.000013,0.000013,0.000013,"cuStreamCreate"
+"API calls",0.000405,0.000011,4,0.000003,0.000000,0.000005,"cuEventCreate"
+"API calls",0.000388,0.000010,7,0.000001,0.000001,0.000003,"cuPointerGetAttributes"
+"API calls",0.000286,0.000008,2,0.000004,0.000001,0.000006,"cuDeviceGetPCIBusId"
+"API calls",0.000242,0.000006,3,0.000002,0.000000,0.000005,"cuCtxSetCurrent"
+"API calls",0.000105,0.000003,2,0.000001,0.000000,0.000003,"cuModuleGetFunction"
+"API calls",0.000079,0.000002,3,0.000001,0.000001,0.000001,"cuDeviceGetCount"
+"API calls",0.000062,0.000002,2,0.000001,0.000000,0.000001,"cuDeviceGet"
+"API calls",0.000047,0.000001,4,0.000000,0.000000,0.000000,"cuDeviceGetAttribute"
+"API calls",0.000021,0.000001,1,0.000001,0.000001,0.000001,"cuDeviceComputeCapability"
+"API calls",0.000017,0.000000,1,0.000000,0.000000,0.000000,"cuCtxGetCurrent"
+"API calls",0.000012,0.000000,1,0.000000,0.000000,0.000000,"cuDriverGetVersion"
+"OpenACC (excl)",98.009106,2.270044,1,2.270044,2.270044,2.270044,"acc_wait@himenoBMT.c:184"
+"OpenACC (excl)",1.816123,0.042064,1,0.042064,0.042064,0.042064,"acc_enter_data@himenoBMT.c:116"
+"OpenACC (excl)",0.134608,0.003118,1,0.003118,0.003118,0.003118,"acc_wait@himenoBMT.c:122"
+"OpenACC (excl)",0.017409,0.000403,1,0.000403,0.000403,0.000403,"acc_wait@himenoBMT.c:116"
+"OpenACC (excl)",0.008092,0.000187,1,0.000187,0.000187,0.000187,"acc_device_init@himenoBMT.c:116"
+"OpenACC (excl)",0.006027,0.000140,8,0.000017,0.000011,0.000044,"acc_enqueue_upload@himenoBMT.c:116"
+"OpenACC (excl)",0.002893,0.000067,1,0.000067,0.000067,0.000067,"acc_exit_data@himenoBMT.c:116"
+"OpenACC (excl)",0.002766,0.000064,2,0.000032,0.000012,0.000053,"acc_enqueue_download@himenoBMT.c:122"
+"OpenACC (excl)",0.002250,0.000052,1,0.000052,0.000052,0.000052,"acc_enqueue_launch@himenoBMT.c:184 (main_184_gpu)"
+"OpenACC (excl)",0.000726,0.000017,1,0.000017,0.000017,0.000017,"acc_compute_construct@himenoBMT.c:116"
+"OpenACC (excl)",0.000000,0.000000,7,0.000000,0.000000,0.000000,"acc_alloc@himenoBMT.c:116"
+"OpenACC (excl)",0.000000,0.000000,7,0.000000,0.000000,0.000000,"acc_create@himenoBMT.c:116"
+"OpenACC (excl)",0.000000,0.000000,7,0.000000,0.000000,0.000000,"acc_delete@himenoBMT.c:122"
+
+==7197== System profiling result:
+"","Device","Count","Avg","Min","Max"
+"SM Clock (MHz)","Tesla P100-PCIE-16GB (0)",27,1328.000000,1328.000000,1328.000000
+"Memory Clock (MHz)","Tesla P100-PCIE-16GB (0)",27,715.000000,715.000000,715.000000
+"Temperature (C)","Tesla P100-PCIE-16GB (0)",53,29.981132,29.000000,30.000000
+"Power (mW)","Tesla P100-PCIE-16GB (0)",53,49833.037736,38803.000000,51130.000000

@@ -1,0 +1,21 @@
+mimax = 129 mjmax = 65 mkmax = 65
+imax = 128 jmax = 64 kmax =64
+cpu : 5.261084 sec.
+Loop executed for 200 times
+Gosa : 0.000000e+00 
+MFLOPS measured : 626.019125
+Score based on MMX Pentium 200MHz : 19.399415
+mimax = 129 mjmax = 65 mkmax = 65
+imax = 128 jmax = 64 kmax =64
+cpu : 43.381825 sec.
+Loop executed for 200 times
+Gosa : 0.000000e+00 
+MFLOPS measured : 75.919794
+Score based on MMX Pentium 200MHz : 2.352643
+mimax = 129 mjmax = 65 mkmax = 65
+imax = 128 jmax = 64 kmax =64
+cpu : 0.437218 sec.
+Loop executed for 200 times
+Gosa : 0.000000e+00 
+MFLOPS measured : 7532.945121
+Score based on MMX Pentium 200MHz : 233.434928
