@@ -1,0 +1,8 @@
+==11478== NVPROF is profiling process 11478, command: ./matmul
+==11478== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+==11478== Profiling application: ./matmul
+==11478== Profiling result:
+==11478== Metric result:
+"Device","Kernel","Invocations","Metric Name","Metric Description","Min","Max","Avg"
+"Tesla P100-PCIE-16GB (0)","matmul_25_gpu",1,"dram_read_transactions","Device Memory Read Transactions",4325817226,4325817226,4325817226
+==11478== Generated result file: /home/thuynh32/Assignment5/2. Matrix Multiplication/3/4096/report_DRAM.nvprof

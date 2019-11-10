@@ -1,0 +1,8 @@
+==7125== NVPROF is profiling process 7125, command: ./bmt
+==7125== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+==7125== Profiling application: ./bmt
+==7125== Profiling result:
+==7125== Metric result:
+"Device","Kernel","Invocations","Metric Name","Metric Description","Min","Max","Avg"
+"Tesla P100-PCIE-16GB (0)","main_184_gpu",1,"dram_read_transactions","Device Memory Read Transactions",352037577,352037577,352037577
+==7125== Generated result file: /home/thuynh32/Assignment5/3. Himeno Benchmark/1A/S/report_DRAM.nvprof

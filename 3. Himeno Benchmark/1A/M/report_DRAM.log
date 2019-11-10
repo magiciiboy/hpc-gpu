@@ -1,0 +1,8 @@
+==7538== NVPROF is profiling process 7538, command: ./bmt
+==7538== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+==7538== Profiling application: ./bmt
+==7538== Profiling result:
+==7538== Metric result:
+"Device","Kernel","Invocations","Metric Name","Metric Description","Min","Max","Avg"
+"Tesla P100-PCIE-16GB (0)","main_184_gpu",1,"dram_read_transactions","Device Memory Read Transactions",2875995088,2875995088,2875995088
+==7538== Generated result file: /home/thuynh32/Assignment5/3. Himeno Benchmark/1A/M/report_DRAM.nvprof
