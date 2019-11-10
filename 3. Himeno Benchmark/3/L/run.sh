@@ -1,4 +1,4 @@
-pgcc -acc -fast -ta=tesla:cc60,managed -Minfo=accel ../himenoBMT.c -DLARGE -o bmt
+pgcc -acc -fast -ta=tesla:cc60 -Minfo=accel ../himenoBMT.c -DLARGE -o bmt
 
 # DRAM
 rm report_bmt.log
