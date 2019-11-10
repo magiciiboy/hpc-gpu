@@ -60,7 +60,7 @@ double calcNext(double *restrict A, double *restrict Anew, int m, int n)
         
 void swap(double *restrict A, double *restrict Anew, int m, int n)
 {
-    #pragma acc parallel loop copyin(Anew[0:n*m]) copy(A[0:n*m])
+    #pragma acc parallel loop copyin(Anew[0:n*m]) copyout(A[0:n*m])
     for( int j = 1; j < n-1; j++)
     {
         for( int i = 1; i < m-1; i++ )
