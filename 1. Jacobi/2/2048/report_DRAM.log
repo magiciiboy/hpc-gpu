@@ -1,10 +1,10 @@
-==16615== NVPROF is profiling process 16615, command: ./jacobi
-==16615== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
-==16615== Profiling application: ./jacobi
-==16615== Profiling result:
-==16615== Metric result:
+==23134== NVPROF is profiling process 23134, command: ./jacobi
+==23134== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+==23134== Profiling application: ./jacobi
+==23134== Profiling result:
+==23134== Metric result:
 "Device","Kernel","Invocations","Metric Name","Metric Description","Min","Max","Avg"
-"Tesla P100-PCIE-16GB (0)","swap_63_gpu",565,"dram_read_transactions","Device Memory Read Transactions",1122070,1131292,1127442
-"Tesla P100-PCIE-16GB (0)","calcNext_47_gpu",566,"dram_read_transactions","Device Memory Read Transactions",1127368,1163365,1145735
-"Tesla P100-PCIE-16GB (0)","calcNext_47_gpu__red",565,"dram_read_transactions","Device Memory Read Transactions",7,43,9
-==16615== Generated result file: /home/thuynh32/Assignment5/1. Jacobi/2/2048/report_DRAM.nvprof
+"Tesla P100-PCIE-16GB (0)","swap_63_gpu",1000,"dram_read_transactions","Device Memory Read Transactions",1123256,1131984,1127626
+"Tesla P100-PCIE-16GB (0)","calcNext_47_gpu",1000,"dram_read_transactions","Device Memory Read Transactions",1132486,1167475,1146125
+"Tesla P100-PCIE-16GB (0)","calcNext_47_gpu__red",1000,"dram_read_transactions","Device Memory Read Transactions",7,51,10
+==23134== Generated result file: /home/thuynh32/Assignment5/1. Jacobi/2/2048/report_DRAM.nvprof

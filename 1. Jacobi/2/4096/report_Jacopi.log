@@ -9,7 +9,7 @@ Jacobi relaxation Calculation: 4096 x 4096 mesh
   700, 0.000345
   800, 0.000302
   900, 0.000269
- total: 305.986655 s
+ total: 177.996832 s
 Jacobi relaxation Calculation: 4096 x 4096 mesh
     0, 0.250000
   100, 0.002397
@@ -21,7 +21,7 @@ Jacobi relaxation Calculation: 4096 x 4096 mesh
   700, 0.000345
   800, 0.000302
   900, 0.000269
- total: 180.663390 s
+ total: 60.903612 s
 Jacobi relaxation Calculation: 4096 x 4096 mesh
     0, 0.250000
   100, 0.002397
@@ -33,4 +33,4 @@ Jacobi relaxation Calculation: 4096 x 4096 mesh
   700, 0.000345
   800, 0.000302
   900, 0.000269
- total: 113.959979 s
+ total: 2.012215 s
