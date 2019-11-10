@@ -1,0 +1,7 @@
+==5688== NVPROF is profiling process 5688, command: ./bmt
+==5688== Profiling application: ./bmt
+==5688== Profiling result:
+==5688== Metric result:
+"Device","Kernel","Invocations","Metric Name","Metric Description","Min","Max","Avg"
+"Tesla P100-PCIE-16GB (0)","jacobi_190_gpu",1,"flop_count_dp","Floating Point Operations(Double Precision)",25808025600,25808025600,25808025600
+==5688== Generated result file: /home/thuynh32/Assignment5/3. Himeno Benchmark/2/M/report_DP.nvprof
