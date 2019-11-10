@@ -113,7 +113,8 @@ main()
  ** Jacobi iteration
  **/
 
-  #pragma acc data
+  #pragma acc data copyin(a[:imax*jmax*kmax],b[:imax*jmax*kmax],c[:imax*jmax*kmax],wkr1[:imax*jmax*kmax],bnd[:imax*jmax*kmax])
+  #pragma acc data copy(wkr2[:imax*jmax*kmax],p[:imax*jmax*kmax])
   {
     gosa = jacobi(NN); 
   }
