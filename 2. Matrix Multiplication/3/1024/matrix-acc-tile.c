@@ -19,7 +19,7 @@ void matmul(){
   int i, j, k;
   #pragma acc data copyin(a[0:SIZE*SIZE],b[0:SIZE*SIZE]), copy(c[0:SIZE*SIZE])
   {
-    #pragma acc parallel loop
+    #pragma acc kernels loop
     for (i = 0; i < SIZE; ++i) {
       #pragma acc loop gang(100), vector(32)
       for (j = 0; j < SIZE; ++j) {

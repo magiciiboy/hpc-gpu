@@ -9,7 +9,7 @@ Jacobi relaxation Calculation: 1024 x 1024 mesh
   700, 0.000345
   800, 0.000302
   900, 0.000269
- total: 93.970064 s
+ total: 167.598605 s
 Jacobi relaxation Calculation: 1024 x 1024 mesh
     0, 0.250000
   100, 0.002397
@@ -21,7 +21,7 @@ Jacobi relaxation Calculation: 1024 x 1024 mesh
   700, 0.000345
   800, 0.000302
   900, 0.000269
- total: 54.052848 s
+ total: 53.993422 s
 Jacobi relaxation Calculation: 1024 x 1024 mesh
     0, 0.250000
   100, 0.002397
@@ -33,4 +33,4 @@ Jacobi relaxation Calculation: 1024 x 1024 mesh
   700, 0.000345
   800, 0.000302
   900, 0.000269
- total: 0.151050 s
+ total: 0.589064 s
