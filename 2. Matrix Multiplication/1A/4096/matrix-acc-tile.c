@@ -16,6 +16,7 @@ void matmul(){
   //IMPLEMENT YOUR OPENACC PARALLEIZATION STRATEGY HERE
 
   // Compute matrix multiplication.
+  int i, j, k;
   #pragma acc kernels
   {
     for (i = 0; i < SIZE; ++i) {
