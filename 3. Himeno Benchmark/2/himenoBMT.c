@@ -113,11 +113,11 @@ main()
  ** Jacobi iteration
  **/
 
-  #pragma acc kernels
+  #pragma acc data
   {
     gosa = jacobi(NN); 
-    cpu1 = second();
   }
+  cpu1 = second();
   
   nflop = (kmax-2)*(jmax-2)*(imax-2)*34;
 
@@ -181,25 +181,27 @@ double jacobi(int nn)
   int i,j,k,n;
   double gosa, s0, ss;
 
-  for(n=0;n<nn;++n){
+  #pragma acc parallel
+  for(n=0;n<nn;++n) {
     gosa = 0.0;
 
+    #pragma acc loop
     for(i=1 ; i<imax-1 ; ++i)
       for(j=1 ; j<jmax-1 ; ++j)
         for(k=1 ; k<kmax-1 ; ++k){
-            s0 = a[i][j][k][0] * p[i+1][j  ][k  ]
-            + a[i][j][k][1] * p[i  ][j+1][k  ]
-            + a[i][j][k][2] * p[i  ][j  ][k+1]
-            + b[i][j][k][0] * ( p[i+1][j+1][k  ] - p[i+1][j-1][k  ]
-            - p[i-1][j+1][k  ] + p[i-1][j-1][k  ] )
-            + b[i][j][k][1] * ( p[i  ][j+1][k+1] - p[i  ][j-1][k+1]
-            - p[i  ][j+1][k-1] + p[i  ][j-1][k-1] )
-            + b[i][j][k][2] * ( p[i+1][j  ][k+1] - p[i-1][j  ][k+1]
-            - p[i+1][j  ][k-1] + p[i-1][j  ][k-1] )
-            + c[i][j][k][0] * p[i-1][j  ][k  ]
-            + c[i][j][k][1] * p[i  ][j-1][k  ]
-            + c[i][j][k][2] * p[i  ][j  ][k-1]
-            + wrk1[i][j][k];
+            s0 = a[i][j][k][0] * p[i+1][j][k]
+                + a[i][j][k][1] * p[i][j+1][k]
+                + a[i][j][k][2] * p[i][j][k+1]
+                + b[i][j][k][0] * ( p[i+1][j+1][k] - p[i+1][j-1][k]
+                - p[i-1][j+1][k] + p[i-1][j-1][k] )
+                + b[i][j][k][1] * ( p[i][j+1][k+1] - p[i][j-1][k+1]
+                - p[i][j+1][k-1] + p[i][j-1][k-1] )
+                + b[i][j][k][2] * ( p[i+1][j][k+1] - p[i-1][j][k+1]
+                - p[i+1][j][k-1] + p[i-1][j][k-1] )
+                + c[i][j][k][0] * p[i-1][j][k]
+                + c[i][j][k][1] * p[i][j-1][k]
+                + c[i][j][k][2] * p[i][j][k-1]
+                + wrk1[i][j][k];
 
             ss = ( s0 * a[i][j][k][3] - p[i][j][k] ) * bnd[i][j][k];
 
@@ -208,10 +210,11 @@ double jacobi(int nn)
             wrk2[i][j][k] = p[i][j][k] + omega * ss;
         }
 
-        for(i=1 ; i<imax-1 ; ++i)
-          for(j=1 ; j<jmax-1 ; ++j)
-            for(k=1 ; k<kmax-1 ; ++k)
-              p[i][j][k] = wrk2[i][j][k];
+    #pragma acc loop
+    for(i=1 ; i<imax-1 ; ++i)
+      for(j=1 ; j<jmax-1 ; ++j)
+        for(k=1 ; k<kmax-1; ++k)
+          p[i][j][k] = wrk2[i][j][k];
   } /* end n loop */
   return(gosa);
 }

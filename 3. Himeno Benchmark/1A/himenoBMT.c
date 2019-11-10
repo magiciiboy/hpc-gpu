@@ -116,9 +116,8 @@ main()
   #pragma acc kernels
   {
     gosa = jacobi(NN); 
-    cpu1 = second();
   }
-  
+  cpu1 = second();
   nflop = (kmax-2)*(jmax-2)*(imax-2)*34;
 
   if(cpu1 != 0.0)
