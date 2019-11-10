@@ -1,0 +1,8 @@
+==17665== NVPROF is profiling process 17665, command: ./bmt
+==17665== Some kernel(s) will be replayed on device 0 in order to collect all events/metrics.
+==17665== Profiling application: ./bmt
+==17665== Profiling result:
+==17665== Metric result:
+"Device","Kernel","Invocations","Metric Name","Metric Description","Min","Max","Avg"
+"Tesla P100-PCIE-16GB (0)","jacobi_181_gpu",1,"dram_read_transactions","Device Memory Read Transactions",384056034,384056034,384056034
+==17665== Generated result file: /home/thuynh32/Assignment5/3. Himeno Benchmark/1B/S/report_DRAM.nvprof

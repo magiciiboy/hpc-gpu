@@ -1,0 +1,7 @@
+==17783== NVPROF is profiling process 17783, command: ./bmt
+==17783== Profiling application: ./bmt
+==17783== Profiling result:
+==17783== Metric result:
+"Device","Kernel","Invocations","Metric Name","Metric Description","Min","Max","Avg"
+"Tesla P100-PCIE-16GB (0)","jacobi_181_gpu",1,"flop_count_dp","Floating Point Operations(Double Precision)",25808025600,25808025600,25808025600
+==17783== Generated result file: /home/thuynh32/Assignment5/3. Himeno Benchmark/1B/M/report_DP.nvprof
